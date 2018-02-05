@@ -528,7 +528,8 @@ function doDelegate(delegationID, userPrivateKeyPEM, userDN, userCERT, user_vo){
 		},
 		
 		success : function(data3, status) {
-			/*var asn1 = ProxyJS.Util.pem2asn1(data3);
+			/*
+			var asn1 = ProxyJS.Util.pem2asn1(data3);
 			var certificate = new X509();
     			try {
         		   certificate.readCertPEM(userCERT);

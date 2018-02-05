@@ -1,17 +1,10 @@
 <config>
-	<ftsAddress>https://webfts-dev.cern.ch:8446</ftsAddress>
+	<ftsAddress>https://fts3.du2.cesnet.cz</ftsAddress>
 	<jobToList>100</jobToList>
-	<endpointListUrl>https://webfts.cern.ch/endpointList</endpointListUrl> 
+	<endpointListUrl>https://fts3.du2.cesnet.cz/cilogon/login.cgi</endpointListUrl> 
 	<proxyCertHours>12</proxyCertHours>
-	<cernboxBaseUrl>root://eosdevbox.cern.ch/eos/devbox/user/</cernboxBaseUrl>
+	<cernboxBaseUrl>vomss://voms1.grid.cesnet.cz:8443/voms/vo.elixir-europe.org/</cernboxBaseUrl>
 	<VOs>
-		<VO>atlas</VO>
-		<VO>auger</VO>
-		<VO>biomed</VO>
-		<VO>bitface</VO>
-		<VO>cms</VO>
-		<VO>dteam</VO>
-		<VO>lhcb</VO>
-		<VO>ops</VO>
+		<VO>vo.elixir-europe.org</VO>
 	</VOs>
 </config>

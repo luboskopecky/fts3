@@ -1,9 +1,11 @@
 # SSO Auth
 <IfModule mod_shib>
+SSLRequireSSL   # The modules only work using HTTPS 
 Require shibboleth
 AuthType shibboleth
-ShibRequireSession Off
-ShibExportAssertion On
+ShibRequireSession On
+ShibRequireAll On
+ShibExportAssertion Off
 </IfModule>
 <IfModule auth_mellon_module>
 AuthType "Mellon"
