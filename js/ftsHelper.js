@@ -149,10 +149,10 @@ function parseUTCDate(str) {
 
 function getCertForDelegation(){
 	if (sessionStorage.userProxy) 
-		return "-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userProxy.match(/.{1,64}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n" +
-			"-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userCert.match(/.{1,64}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n";
+		return "-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userProxy.match(/.{1,76}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n" +
+			"-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userCert.match(/.{1,76}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n";
 	else 
- 		return "-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userCert.match(/.{1,64}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n";
+ 		return "-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userCert.match(/.{1,76}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n";
 }
 
 function getKeyForDelegation(){
@@ -230,7 +230,7 @@ function getDelegationIDSTS(fieldName, delegationNeeded, cert, key){
 			isDelegated(data1.delegation_id, delegationNeeded);
 		},
 		error : function(jqXHR, textStatus, errorThrown) {
-			showError(jqXHR, textStatus, errorThrown, "Error connecting to the FTS server to obtain the user credentials. Check if you have installed a valid copy of the CERN ROOT CA certificate."+ supportText);
+			showError(jqXHR, textStatus, errorThrown, "22222Error connecting to the FTS server to obtain the user credentials. Check if you have installed a valid copy of the CERN ROOT CA certificate."+ supportText);
 		}
 	});
 }
@@ -256,8 +256,10 @@ function getDelegationID(fieldName, delegationNeeded){
 			}
 			isDelegated(data1.delegation_id, delegationNeeded);
 		},
+		// url https://fts3.du2.cesnet.cz/transmissions.php, link "My jobs"
 		error : function(jqXHR, textStatus, errorThrown) {
-			showError(jqXHR, textStatus, errorThrown, "Error connecting to the FTS server to obtain the user credentials. Check if you have installed a valid copy of the CERN ROOT CA certificate."+ supportText);
+//			showError(jqXHR, textStatus, errorThrown, "Error connecting"+ sessionStorage.ftsRestEndpoint);
+			showError(jqXHR, textStatus, errorThrown, "3333333Error connecting to the FTS server to obtain the user credentials. Check if you have installed a valid copy of the CERN ROOT CA certificate."+ supportText);
 		}
 	});
 }

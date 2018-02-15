@@ -121,6 +121,7 @@ else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) <
 <script type="text/javascript" src="js/lib/FeedEk-2.0.2-patched/FeedEk.js"></script>
 
 <script src="js/ftsHelper.js"></script>
+
 <script>
 $( document ).ready(function() {
 	$('#divRss').FeedEk({
@@ -130,7 +131,7 @@ $( document ).ready(function() {
     		ShowPubDate: true,
     		TitleLinkTarget: '_blank',
   	});
-
+	
         if(!sessionStorage.ftsRestEndpoint)
                 getConfig();
 });

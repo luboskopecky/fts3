@@ -1,9 +1,9 @@
 <config>
-	<ftsAddress>https://fts3.du2.cesnet.cz</ftsAddress>
+	<ftsAddress>https://fts3.du2.cesnet.cz:8446</ftsAddress>
 	<jobToList>100</jobToList>
-	<endpointListUrl>https://fts3.du2.cesnet.cz/cilogon/login.cgi</endpointListUrl> 
+	<endpointListUrl>https://fts3.du2.cesnet.cz</endpointListUrl> 
 	<proxyCertHours>12</proxyCertHours>
-	<cernboxBaseUrl>vomss://voms1.grid.cesnet.cz:8443/voms/vo.elixir-europe.org/</cernboxBaseUrl>
+	<cernboxBaseUrl></cernboxBaseUrl>
 	<VOs>
 		<VO>vo.elixir-europe.org</VO>
 	</VOs>
