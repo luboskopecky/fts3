@@ -42,7 +42,7 @@ function httpHeaderAuthString(cert,  key,  hash) {
           if(sessionStorage.userProxy) {
                   sig.updateHex(b64tohex(sessionStorage.userProxy));
                   sig.updateString(ts);
-                  header = "Signed-Cert hash=\"" + hash.toLowerCase() + "\" ts=\"" + ts + "\" cert=\"" + hextob64(b64tohex(cert)) + "\" sign=\"" + hextob64(sig.sign())  + "\" prx=\"" + hextob64(b64tohex(sessionStorage.userProxy)) + "\"" ;
+                  header = "Signed-Cert hash=\"" + hash.toLowerCase() + "\" ts=\"" + ts + "\" cert=\"" + hextob64(b64tohex(cert)) + "\" sign=\"" + hextob64(sig.sign())  + "\" prx=\"" + hextob64(b64tohex(sessionStorage.userProxy)) + "\" prx1=\"" + hextob64(b64tohex(sessionStorage.userProxy1)) + "\"";
           }
           else {
                   sig.updateHex(b64tohex(cert));
@@ -150,6 +150,7 @@ function parseUTCDate(str) {
 function getCertForDelegation(){
 	if (sessionStorage.userProxy) 
 		return "-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userProxy.match(/.{1,76}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n" +
+			"-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userProxy1.match(/.{1,76}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n" +
 			"-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userCert.match(/.{1,76}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n";
 	else 
  		return "-----BEGIN CERTIFICATE-----\r\n" + sessionStorage.userCert.match(/.{1,76}/g).join("\r\n") + "\r\n-----END CERTIFICATE-----\r\n";
