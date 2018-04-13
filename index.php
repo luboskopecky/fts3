@@ -152,16 +152,6 @@ $( document ).ready(function() {
 		
 		<div class= "loginBar">
 			<div class="row-fluid">
-				<div class='pull-left'>
-					<ul class="nav">
-						<script> 
-							$(function(){
-								$("#userAuth").load("userAuth.php");
-							});
-						</script>
-						<div id="userAuth"></div>
-					</ul>
-				</div>
 				<script> 
 					$(function(){
 						$("#ssoAuth").load("kipper/php/ssoAuth.php");
